@@ -1,0 +1,19 @@
+.logo {
+  fill: white;
+
+  &--color {
+    #logo-svg-white {
+      --color-p: #0B3D86;
+      --color-a: #EE7601;
+      --color-i: #0065B1;
+      --color-n: #008E3D;
+      --color-t: #903189;
+      --color-erest: #FF3F4A;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 200px;
+    height: 37px;
+  }
+}
