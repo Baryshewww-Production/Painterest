@@ -1,0 +1,59 @@
+.about__common-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: minmax(126px, auto) auto;
+  }
+}
+
+.about__heading {
+  margin-bottom: 23px;
+
+  @media (min-width: $desktop) {
+    margin-top: 33px;
+    margin-bottom: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.about__picture {
+  margin-bottom: 27px;
+
+  @media (min-width: $phablet) {
+    display: flex;
+    min-width: 348px;
+    max-width: 432px;
+    justify-self: center;
+  }
+
+  @media (min-width: $tablet) {
+    min-width: 640px;
+    max-width: 760px;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    min-width: unset;
+    max-width: 550px;
+    margin: 0;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+  }
+}
+
+.about__benefits {
+  @media (min-width: $tablet) {
+    min-width: 640px;
+    max-width: 760px;
+    justify-self: center;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: unset;
+    max-width: unset;
+    justify-self: center;
+  }
+}

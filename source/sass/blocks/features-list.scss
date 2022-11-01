@@ -1,0 +1,142 @@
+.features-list {
+  @include list-style-reset();
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $phablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+}
+
+.feature-list__item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 15px 16px 24px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: -9px;
+
+  &--waterproof {
+    margin-top: 0;
+    background-color: $basic-red;
+  }
+
+  &--eco {
+    background-color: $basic-orange;
+  }
+
+  &--washable {
+    background-color: $basic-blue;
+  }
+
+  &--outside {
+    background-color: $basic-indigo;
+  }
+
+  &--elastic {
+    background-color: $basic-green;
+  }
+
+  &--shades {
+    background-color: $basic-violet;
+    border-radius: 10px;
+  }
+
+  &:hover .feature-list__icon {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+
+  @media (min-width: $phablet) {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 122px;
+
+    &--waterproof {
+      margin-top: 0;
+      border-top-right-radius: 0;
+      background-color: $basic-red;
+    }
+
+    &--eco {
+      margin-top: 0;
+      border-top-left-radius: 0;
+    }
+
+    &--washable {
+      border-top-right-radius: 0;
+      background-color: $basic-blue;
+    }
+
+    &--outside {
+      border-top-left-radius: 0;
+      background-color: $basic-indigo;
+    }
+
+    &--elastic {
+      border-radius: 10px 0 0 10px;
+      background-color: $basic-green;
+    }
+
+    &--shades {
+      border-radius: 0 10px 10px 0;
+      background-color: $basic-violet;
+
+    }
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    margin: 0;
+    padding: 10px 15px;
+    height: 64px;
+    border-radius: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 10px;
+    height: 136px;
+  }
+}
+
+.feature-list__icon {
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.feature-list__caption {
+  margin: 0 0 0 10px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $white;
+
+  @media (min-width: $phablet) {
+    text-align: center;
+    margin: 10px 0 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0 0 0 10px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+}
