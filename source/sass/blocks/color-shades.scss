@@ -1,0 +1,88 @@
+.color-shades {
+  @include box-shadow-mobail();
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (min-width: $desktop) {
+    border-radius: 15px;
+  }
+}
+
+.color-shades__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-self: flex-start;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba($special-gray, 50%);
+
+  @media (min-width: $tablet) {
+    padding: 22px;
+    margin-bottom: 22px;
+  }
+}
+
+.color-shades__title-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $font-gray;
+
+  @media (min-width: $phablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.color-shades__text {
+  margin: 0 20px 30px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $font-gray;
+
+  &--2 {
+    margin-bottom: 0;
+  }
+
+  &--accent {
+    color: $brand-red;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0 22px 30px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.color-shades__button {
+  margin: 40px 20px 25px auto;
+
+  @media (min-width: $tablet) {
+    margin: 50px 22px 30px auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin: auto 22px 30px auto;
+  }
+}
