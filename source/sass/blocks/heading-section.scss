@@ -1,0 +1,589 @@
+.heading-section {
+  position: relative;
+  width: 100%;
+  height: 89px;
+  border-radius: 10px;
+  background-color: $special-gray-dark;
+
+  @media (min-width: $phablet) {
+    height: 101px;
+  }
+
+  @media (min-width: $tablet) {
+    height: 144px;
+    border-radius: 15px;
+
+    &--features {
+      background-image: url("../../img/properties/bg-properties-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/properties/bg-properties-tablet@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 19px;
+        right: 25px;
+        width: 196px;
+        height: 152px;
+        background-image: url("../../img/properties/bg-properties-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/properties/bg-properties-element-tablet@2x.png");
+        }
+      }
+    }
+
+    &--applaying {
+      background-color: #D29400;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 23px;
+        width: 277px;
+        height: 203px;
+        background-image: url("../../img/applaying/bg-applaying-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/applaying/bg-applaying-element-tablet@2x.png");
+        }
+      }
+    }
+
+    &--surfaces {
+      background-color: $special-gray-light;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 31px;
+        right: 25px;
+        width: 157px;
+        height: 82px;
+        background-image: url("../../img/surfaces/bg-surfaces-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/surfaces/bg-surfaces-element-tablet@2x.png");
+        }
+      }
+    }
+
+    &--colors {
+      background-color: $special-gray-light;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 10px;
+        right: 20px;
+        width: 251px;
+        height: 152px;
+        background-image: url("../../img/colors/bg-colors-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/colors/bg-colors-element-tablet@2x.png");
+        }
+      }
+    }
+
+    &--reasons {
+      background-image: url("../../img/reasons/bg-reasons-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: cover;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/reasons/bg-reasons-tablet@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 20px;
+        width: 209px;
+        height: 159px;
+        background-image: url("../../img/reasons/bg-reasons-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/reasons/bg-reasons-element-tablet@2x.png");
+        }
+      }
+    }
+
+    &--amount {
+      background-image: url("../../img/amount/bg-amount-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/amount/bg-amount-tablet@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 0;
+        width: 241px;
+        height: 172px;
+        border-bottom-right-radius: 15px;
+        background-image: url("../../img/amount/bg-amount-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/amount/bg-amount-element-tablet@2x.png");
+        }
+      }
+    }
+
+    &--questions {
+      background-image: url("../../img/questions/bg-questions-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/questions/bg-questions-tablet@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 20px;
+        width: 291px;
+        height: 182px;
+        background-image: url("../../img/questions/bg-questions-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/questions/bg-questions-element-tablet@2x.png");
+        }
+      }
+    }
+
+    &--order {
+      background-image: url("../../img/order/bg-order-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/order/bg-order-tablet@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 20px;
+        width: 245px;
+        height: 175px;
+        background-image: url("../../img/order/bg-order-element-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/order/bg-order-element-tablet@2x.png");
+        }
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    height: 190px;
+    border-radius: 25px;
+
+    &--features {
+      background-image: url("../../img/properties/bg-properties-desktop(min)@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/properties/bg-properties-desktop(min)@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 19px;
+        right: 34px;
+        width: 274px;
+        height: 212px;
+        background-image: url("../../img/properties/bg-properties-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/properties/bg-properties-element-desktop(min)@2x.png");
+        }
+      }
+    }
+
+    &--applaying {
+      background-color: #D29400;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 23px;
+        width: 364px;
+        height: 267px;
+        background-image: url("../../img/applaying/bg-applaying-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/applaying/bg-applaying-element-desktop(min)@2x.png");
+        }
+      }
+    }
+
+    &--surfaces {
+      background-color: $special-gray-light;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 36px;
+        right: 48px;
+        width: 245px;
+        height: 127px;
+        background-image: url("../../img/surfaces/bg-surfaces-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/surfaces/bg-surfaces-element-desktop(min)@2x.png");
+        }
+      }
+    }
+
+    &--colors {
+      background-color: $special-gray-light;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 10px;
+        right: 20px;
+        width: 341px;
+        height: 208px;
+        background-image: url("../../img/colors/bg-colors-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/colors/bg-colors-element-desktop(min)@2x.png");
+        }
+      }
+    }
+
+    &--reasons {
+      background-image: url("../../img/reasons/bg-reasons-desktop(min)@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: cover;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/reasons/bg-reasons-desktop(min)@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 40px;
+        width: 277px;
+        height: 215px;
+        background-image: url("../../img/reasons/bg-reasons-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/reasons/bg-reasons-element-desktop(min)@2x.png");
+        }
+      }
+    }
+
+    &--amount {
+      background-image: url("../../img/amount/bg-amount-desktop(min)@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/amount/bg-amount-desktop(min)@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 0;
+        width: 317px;
+        height: 227px;
+        border-bottom-right-radius: 25px;
+        background-image: url("../../img/amount/bg-amount-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/amount/bg-amount-element-desktop(min)@2x.png");
+        }
+      }
+    }
+
+    &--questions {
+      background-image: url("../../img/questions/bg-questions-desktop(min)@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/questions/bg-questions-desktop(min)@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 40px;
+        width: 373px;
+        height: 233px;
+        background-image: url("../../img/questions/bg-questions-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/questions/bg-questions-element-desktop(min)@2x.png");
+        }
+      }
+    }
+
+    &--order {
+      background-image: url("../../img/order/bg-order-desktop(min)@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: contain;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/order/bg-order-desktop(min)@2x.jpg");
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 25px;
+        width: 391px;
+        height: 239px;
+        background-image: url("../../img/order/bg-order-element-desktop(min)@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../../img/order/bg-order-element-desktop(min)@2x.png");
+        }
+      }
+    }
+  }
+}
+
+.heading-section__bg {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-grow: 2;
+  margin-right: auto;
+  min-width: 290px;
+  max-width: 341px;
+  height: 89px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-image: url("../../img/title/bg-title-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: right 39px top;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../../img/title/bg-title-mobile@2x.png");
+  }
+
+  @media (min-width: $phablet) {
+    min-width: 348px;
+    max-width: 560px;
+    height: 101px;
+    background-image: url("../../img/title/bg-title-phablet@1x.png");
+    background-position: right 27px top;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/title/bg-title-phablet@2x.png");
+    }
+  }
+
+  @media (min-width: $tablet) {
+    min-width: 641px;
+    max-width: 861px;
+    height: 144px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-image: url("../../img/title/bg-title-tablet@1x.png");
+    background-position: right 208px top;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/title/bg-title-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 881px;
+    max-width: 1180px;
+    height: 190px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-image: url("../../img/title/bg-title-desktop(min).png");
+    background-position: right 293px top;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/title/bg-title-desktop(min)@2x.png");
+    }
+  }
+}
+
+.heading-section__caption {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0 0 19px;
+
+  @media (min-width: $phablet) {
+    margin: 25px 0 0 25px;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 39px 0 0 39px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 55px 0 0 55px;
+  }
+}
+
+.heading-section__text-accent {
+  display: block;
+  padding: 4px 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $white;
+  border-radius: 5px;
+  background-color: $brand-red;
+
+  &--hidden {
+    display: none;
+  }
+
+  @media (min-width: $phablet) {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 25px;
+    line-height: 25px;
+    padding: 5px 20px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+
+    &--hidden {
+      display: inline;
+    }
+  }
+}
+
+.heading-section__text {
+  display: block;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $font-gray-dark;
+
+  @media (min-width: $phablet) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
