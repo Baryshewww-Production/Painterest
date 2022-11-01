@@ -1,0 +1,255 @@
+.surfaces {
+  padding-top: 65px;
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 140px;
+  }
+}
+
+.surfaces__heading {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
+}
+
+.surfaces__common-wrapper {
+  @media (min-width: $tablet) {
+    position: relative;
+  }
+}
+
+.surfaces__filter-list {
+  @include list-style-reset();
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  @media (min-width: $phablet) {
+    grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+  }
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    grid-template-columns: 208px;
+    gap: 12px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 294px;
+    gap: 20px;
+  }
+
+}
+
+.surfaces__filter-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px;
+  height: 50px;
+  border: 1px solid $brand-dark-blue;
+  border-radius: 5px;
+  color: $brand-dark-blue;
+  transition: 0.3s ease-in-out;
+
+  &--stucco {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $tablet) {
+    position: relative;
+    padding: 13px 26px;
+    border-radius: 10px;
+    height: unset;
+    color: $brand-red;
+    border: none;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    @include box-shadow-mobail();
+
+    &[for="wood-surface"] {
+      background-image: url("../../img/surfaces/thumb-wood-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-wood-tablet@2x.jpg");
+      }
+    }
+
+    &[for="metal-surface"] {
+      background-image: url("../../img/surfaces/thumb-metal-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-metal-tablet@2x.jpg");
+      }
+    }
+
+    &[for="mineral-surface"] {
+      background-image: url("../../img/surfaces/thumb-mineral-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-mineral-tablet@2x.jpg");
+      }
+    }
+
+    &[for="stucco-surface"] {
+      background-image: url("../../img/surfaces/thumb-stucco-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-stucco-tablet@2x.jpg");
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      z-index: 10;
+      width: 101%;
+      height: 105%;
+      border-radius: 10px;
+      background-color: $white;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    padding: 22px 39px;
+    border-radius: 15px;
+    height: 91px;
+    color: $brand-red;
+    border: none;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    @include box-shadow-mobail();
+
+    &[for="wood-surface"] {
+      background-image: url("../../img/surfaces/thumb-wood-desktop(min)@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-wood-desktop(min)@2x.jpg");
+      }
+    }
+
+    &[for="metal-surface"] {
+      background-image: url("../../img/surfaces/thumb-metal-desktop(min)@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-metal-desktop(min)@2x.jpg");
+      }
+    }
+
+    &[for="mineral-surface"] {
+      background-image: url("../../img/surfaces/thumb-mineral-desktop(min)@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-mineral-desktop(min)@2x.jpg");
+      }
+    }
+
+    &[for="stucco-surface"] {
+      background-image: url("../../img/surfaces/thumb-stucco-desktop(min)@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/surfaces/thumb-stucco-desktop(min)@2x.jpg");
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      z-index: 10;
+      width: 101%;
+      height: 105%;
+      border-radius: 10px;
+      background-color: $white;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+}
+
+.surfaces__filter-button-text {
+  position: relative;
+  z-index: 15;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 14px;
+
+    &--uppercase {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 18px;
+
+    &--uppercase {
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+}
+
+.surfaces__toggler--1:checked ~ .surfaces__filter-list .surfaces__filter-button[for="wood-surface"],
+.surfaces__toggler--2:checked ~ .surfaces__filter-list .surfaces__filter-button[for="metal-surface"],
+.surfaces__toggler--3:checked ~ .surfaces__filter-list .surfaces__filter-button[for="mineral-surface"],
+.surfaces__toggler--4:checked ~ .surfaces__filter-list .surfaces__filter-button[for="stucco-surface"] {
+  background-color: $brand-dark-blue;
+  color: $white;
+
+  @media (min-width: $tablet) {
+    background-color: $white;
+  }
+}
+
+.surfaces__toggler--1:checked ~ .surfaces__filter-list .surfaces__filter-button[for="wood-surface"]::after,
+.surfaces__toggler--2:checked ~ .surfaces__filter-list .surfaces__filter-button[for="metal-surface"]::after,
+.surfaces__toggler--3:checked ~ .surfaces__filter-list .surfaces__filter-button[for="mineral-surface"]::after,
+.surfaces__toggler--4:checked ~ .surfaces__filter-list .surfaces__filter-button[for="stucco-surface"]::after {
+  @media (min-width: $tablet) {
+    opacity: 0;
+  }
+}
+
+.surfaces__toggler--1:checked ~ .surfaces__content-list .content-surfaces--1,
+.surfaces__toggler--2:checked ~ .surfaces__content-list .content-surfaces--2,
+.surfaces__toggler--3:checked ~ .surfaces__content-list .content-surfaces--3,
+.surfaces__toggler--4:checked ~ .surfaces__content-list .content-surfaces--4 {
+  display: grid;
+}
+
+.surfaces__content-list {
+  @include list-style-reset();
+}
