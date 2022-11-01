@@ -1,0 +1,32 @@
+.trademark-picture {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -25;
+    top:-55%;
+    left: -55%;
+    width: 200%;
+    height: 200%;
+    background-image: url("../../img/svg/bg-trademark.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.trademark-picture__image {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $tablet) {
+    margin: 0 104px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,88 @@
+.benefits-list {
+  @include list-style-reset();
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 21px 0 80px 0;
+  position: relative;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 2px;
+    height: 100%;
+    background-color: $white;
+    border-radius: 5px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 21px;
+    height: 17px;
+    background-image: url("../../img/svg/Strelka-down.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 28px;
+    margin-bottom: 64px;
+  }
+}
+
+.benefits-list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 36px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+  &--1::before {
+    background-color: $basic-red;
+  }
+
+  &--2::before {
+    background-color: $basic-orange;
+  }
+
+  &--3::before {
+    background-color: $basic-green;
+  }
+
+  &--4::before {
+    background-color: $basic-blue;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
