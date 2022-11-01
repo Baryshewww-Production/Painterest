@@ -1,0 +1,256 @@
+.social {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 107px;
+  height: 137px;
+  border-radius: 10px;
+  outline: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: -13px;
+    width: 34px;
+    height: 28px;
+    background-image: url("../../img/svg/icon-touch.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    right: -9px;
+    width: 30px;
+    height: 24px;
+    background-size: contain;
+  }
+
+  &--whatsapp {
+    margin-right: 30px;
+  }
+
+  &--whatsapp:hover .social__header--whatsapp,
+  &--whatsapp:focus .social__header--whatsapp,
+  &--whatsapp:active .social__header--whatsapp {
+    background-color: $whatsapp-hover;
+  }
+
+  &--whatsapp:hover .social__qr-inner,
+  &--whatsapp:focus .social__qr-inner,
+  &--whatsapp:active .social__qr-inner {
+    border-color: $whatsapp-hover;
+  }
+
+  &--whatsapp:hover .social__qr--whatsapp,
+  &--whatsapp:focus .social__qr--whatsapp,
+  &--whatsapp:active .social__qr--whatsapp {
+    fill: $whatsapp-hover;
+  }
+
+  &--telegram:hover .social__header--telegram,
+  &--telegram:focus .social__header--telegram,
+  &--telegram:active .social__header--telegram {
+    background-color: $telegram-hover;
+  }
+
+  &--telegram:hover .social__qr-inner,
+  &--telegram:focus .social__qr-inner,
+  &--telegram:active .social__qr-inner {
+    border-color: $telegram-hover;
+  }
+
+  &--telegram:hover .social__qr--telegram,
+  &--telegram:focus .social__qr--telegram,
+  &--telegram:active .social__qr--telegram {
+    fill: $telegram-hover;
+  }
+
+  @media (min-width: $phablet) {
+    width: 112px;
+    height: 145px;
+
+    &--whatsapp {
+      margin-right: 60px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    width: 162px;
+    height: 210px;
+    border-radius: 15px;
+
+    &::after {
+      top: 22px;
+      right: -13px;
+      width: 37px;
+      height: 31px;
+    }
+
+    &--whatsapp {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--whatsapp {
+      margin-right: 25px;
+    }
+  }
+}
+
+.social__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 36px;
+  padding: 6px 8px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+
+  &--whatsapp {
+     background-color: $whatsapp;
+   }
+
+  &--telegram {
+    background-color: $telegram;
+  }
+
+  @media (min-width: $phablet) {
+    height: 45px;
+    padding-top: 12px;
+  }
+
+  @media (min-width: $tablet) {
+    height: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
+.social__title {
+  position: relative;
+  padding-left: 22px;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &--whatsapp::before {
+    top: -1px;
+    width: 17px;
+    height: 17px;
+    background-image: url("../../img/svg/icon-whatsapp.svg");
+    background-size: 17px 17px;
+  }
+
+  &--telegram::before {
+    top: 0;
+    width: 17px;
+    height: 15px;
+    background-image: url("../../img/svg/icon-telegram.svg");
+    background-size: 17px 15px;
+  }
+
+  @media (min-width: $phablet) {
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 26px;
+
+    &--whatsapp::before {
+      top: -5px;
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+
+    &--telegram::before {
+      top: -3px;
+      width: 20px;
+      height: 17px;
+      background-size: 20px 17px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 15px;
+    padding-left: 38px;
+
+    &--whatsapp::before {
+      top: -8px;
+      left: 2px;
+      width: 28px;
+      height: 28px;
+      background-size: 28px 28px;
+    }
+
+    &--telegram::before {
+      top: -5px;
+      left: 1px;
+      width: 28px;
+      height: 24px;
+      background-size: 28px 24px;
+    }
+  }
+}
+
+.social__qr-inner {
+  height: 100%;
+  display: flex;
+  margin-top: -1px;
+  padding-top: 10px;
+  padding-left: 12px;
+  border: 2px solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: border-color 0.3s ease-in-out;
+
+  &--whatsapp {
+    border-color: $whatsapp;
+  }
+
+  &--telegram {
+    border-color: $telegram;
+  }
+
+  @media (min-width: $phablet) {
+    padding-top: 11px;
+    padding-left: 14px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 14px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.social__qr {
+  transition: fill 0.3s ease-in-out;
+  &--whatsapp {
+    fill: $whatsapp;
+  }
+
+  &--telegram {
+    fill: $telegram;
+  }
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    height: auto;
+  }
+}

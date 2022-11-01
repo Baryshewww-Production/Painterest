@@ -1,0 +1,49 @@
+.important-info {
+  display: grid;
+  gap: 15px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.important-info__item {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+
+  &--green {
+    color: $brand-green;
+    background-color: $brand-green-light;
+    border-color: $brand-green;
+  }
+
+  &--yellow {
+    color: $basic-orange;
+    background-color: $bg-orange-opacity;
+    border-color: $basic-orange;
+  }
+
+  @media (min-width: $phablet) {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 35px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
