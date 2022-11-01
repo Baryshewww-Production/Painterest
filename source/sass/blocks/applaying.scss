@@ -1,0 +1,309 @@
+.applaying {
+  padding-top: 65px;
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 140px;
+  }
+}
+
+.applaying__heading {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
+}
+
+.applaying__common-wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: minmax(288px, 368px) minmax(321px, 1fr);
+    grid-template-rows: auto;
+    gap: 32px;
+    min-height: 623px;
+    max-height: 711px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: minmax(440px, 1fr) minmax(411px, 749px);
+    gap: 30px;
+    min-height: unset;
+    max-height: unset;
+    height: 768px;
+  }
+}
+
+.applaying__filter-list {
+  @include list-style-reset();
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: $white;
+    @include box-shadow-mobail();
+    overflow: hidden;
+  }
+}
+
+.applaying__filter-item {
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  &--2 {
+    order: 4;
+  }
+
+  &--3 {
+    order: 5;
+  }
+
+  &--4 {
+    order: 3;
+  }
+
+  &--5 {
+    order: 6;
+  }
+
+  &--6 {
+    order: 7;
+  }
+
+  &--7 {
+    order: 1;
+  }
+
+  &--8 {
+    order: 2;
+  }
+
+  @media (min-width: $phablet) {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    order: unset;
+
+    &--1 .applaying__filter-button {
+      padding-top: 15px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--1 .applaying__filter-button {
+      padding-top: 20px;
+    }
+  }
+}
+
+.applaying__filter-button {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px 7px 4px 6px;
+  border: 1px solid $brand-dark-blue;
+  border-radius: 5px;
+  background-color: transparent;
+
+  @media (min-width: $phablet) {
+    padding: 4px 10px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 10px 69px 10px 10px;
+    border: none;
+    border-radius: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 10px;
+      width: 40px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: $special-gray;
+      transition: 0.05s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 33px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $white;
+      transition: 0.25s ease-in-out;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 20px 90px 20px 20px;
+    border: none;
+    border-radius: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      width: 59px;
+      height: 29px;
+      border-radius: 30px;
+      background-color: $special-gray;
+      transition: 0.05s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 53px;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background-color: $white;
+      transition: 0.25s ease-in-out;
+    }
+  }
+}
+
+.applaying__filter-icon {
+  fill: $brand-red;
+
+  @media (min-width: $phablet) {
+    width: 31px;
+    height: 31px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.applaying__filter-button-text {
+  padding-left: 5px;
+  font-size: 11px;
+  line-height: 10px;
+  font-weight: 500;
+  color: $brand-dark-blue;
+
+  @media (min-width: $phablet) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    font-size: 15px;
+    line-height: 15px;
+    color: $font-gray;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &:hover,
+    &:focus {
+      color: $brand-dark-blue;
+    }
+  }
+}
+
+.applaying__item-toggler--1:checked ~ .applaying__filter-list .applaying__filter-button[for="metal"],
+.applaying__item-toggler--2:checked ~ .applaying__filter-list .applaying__filter-button[for="facade"],
+.applaying__item-toggler--3:checked ~ .applaying__filter-list .applaying__filter-button[for="roof"],
+.applaying__item-toggler--4:checked ~ .applaying__filter-list .applaying__filter-button[for="fence"],
+.applaying__item-toggler--5:checked ~ .applaying__filter-list .applaying__filter-button[for="plinth"],
+.applaying__item-toggler--6:checked ~ .applaying__filter-list .applaying__filter-button[for="basin"],
+.applaying__item-toggler--7:checked ~ .applaying__filter-list .applaying__filter-button[for="interior"],
+.applaying__item-toggler--8:checked ~ .applaying__filter-list .applaying__filter-button[for="stucco"] {
+  background-color: $brand-dark-blue;
+
+  @media (min-width: $tablet) {
+    background-color: unset;
+
+    &::before {
+      background-color: $brand-red;
+    }
+
+    &::after {
+      right: 13px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      right: 23px;
+    }
+  }
+}
+
+.applaying__item-toggler--1:checked ~ .applaying__filter-list .applaying__filter-icon--1,
+.applaying__item-toggler--2:checked ~ .applaying__filter-list .applaying__filter-icon--2,
+.applaying__item-toggler--3:checked ~ .applaying__filter-list .applaying__filter-icon--3,
+.applaying__item-toggler--4:checked ~ .applaying__filter-list .applaying__filter-icon--4,
+.applaying__item-toggler--5:checked ~ .applaying__filter-list .applaying__filter-icon--5,
+.applaying__item-toggler--6:checked ~ .applaying__filter-list .applaying__filter-icon--6,
+.applaying__item-toggler--7:checked ~ .applaying__filter-list .applaying__filter-icon--7,
+.applaying__item-toggler--8:checked ~ .applaying__filter-list .applaying__filter-icon--8 {
+  fill: $white;
+
+  @media (min-width: $tablet) {
+    fill: $brand-red;
+  }
+}
+
+.applaying__item-toggler--1:checked ~ .applaying__filter-list .applaying__filter-button-text--1,
+.applaying__item-toggler--2:checked ~ .applaying__filter-list .applaying__filter-button-text--2,
+.applaying__item-toggler--3:checked ~ .applaying__filter-list .applaying__filter-button-text--3,
+.applaying__item-toggler--4:checked ~ .applaying__filter-list .applaying__filter-button-text--4,
+.applaying__item-toggler--5:checked ~ .applaying__filter-list .applaying__filter-button-text--5,
+.applaying__item-toggler--6:checked ~ .applaying__filter-list .applaying__filter-button-text--6,
+.applaying__item-toggler--7:checked ~ .applaying__filter-list .applaying__filter-button-text--7,
+.applaying__item-toggler--8:checked ~ .applaying__filter-list .applaying__filter-button-text--8 {
+  color: $white;
+
+  @media (min-width: $tablet) {
+    color: $font-gray;
+  }
+}
+
+.applaying__content-list {
+  @include list-style-reset();
+  padding-top: 22px;
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+  }
+}
+
+.applaying__item-toggler--1:checked ~ .applaying__content-list .content-applaying--1,
+.applaying__item-toggler--2:checked ~ .applaying__content-list .content-applaying--2,
+.applaying__item-toggler--3:checked ~ .applaying__content-list .content-applaying--3,
+.applaying__item-toggler--4:checked ~ .applaying__content-list .content-applaying--4,
+.applaying__item-toggler--5:checked ~ .applaying__content-list .content-applaying--5,
+.applaying__item-toggler--6:checked ~ .applaying__content-list .content-applaying--6,
+.applaying__item-toggler--7:checked ~ .applaying__content-list .content-applaying--7,
+.applaying__item-toggler--8:checked ~ .applaying__content-list .content-applaying--8 {
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+}
+
