@@ -1,0 +1,23 @@
+.questions {
+  padding-top: 65px;
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 140px;
+  }
+}
+
+.questions__heading {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
