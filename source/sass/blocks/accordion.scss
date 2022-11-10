@@ -1,0 +1,209 @@
+.accordion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+
+  @media (min-width: $tablet) {
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 23px;
+  }
+}
+
+.accordion__item-wrapper {
+  @include box-shadow-mobail();
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    border-radius: 15px;
+  }
+}
+
+.accordion__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 45px 15px 15px;
+  border: none;
+  background-color: $white;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    background-image: url("../../img/svg/button-accordion-mobile.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &--collapse::before {
+    transform: rotate(0deg);
+  }
+
+  &:hover .accordion__title,
+  &:focus .accordion__title {
+    color: rgba($font-gray, 50%);
+  }
+
+  &:hover .accordion__title::before,
+  &:focus .accordion__title::before {
+    margin-right: 12px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 18px 60px 18px 25px;
+
+    &::before {
+      top: 24px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+    }
+
+    &:hover .accordion__title::before,
+    &:focus .accordion__title::before {
+      margin-right: 17px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 18px 60px 18px 30px;
+
+    &::before {
+      top: 33px;
+      right: 35px;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+    }
+
+    &:hover .accordion__title::before,
+    &:focus .accordion__title::before {
+      margin-right: 24px;
+    }
+  }
+}
+
+.accordion__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 500;
+  color: $font-gray;
+  transition: color 0.1s ease-in-out;
+
+  &::before {
+    content: attr(data-number);
+    margin-right: 7px;
+    color: $white;
+    width: 25px;
+    height: 25px;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    align-items: center;
+    border-radius: 50%;
+    transition: margin 0.25s ease-in-out;
+  }
+
+  &--1::before {
+    background-color: $basic-red;
+  }
+
+  &--2::before {
+    background-color: $basic-orange;
+  }
+
+  &--3::before {
+    background-color: $basic-blue;
+  }
+
+  &--4::before {
+    background-color: $basic-indigo;
+  }
+
+  &--5::before {
+    background-color: $basic-green;
+  }
+
+  &--6::before {
+    background-color: $basic-violet;
+  }
+
+  &--7::before {
+    background-color: $basic-azure;
+  }
+
+  &--8::before {
+    background-color: $basic-yellow;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 19px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $font-gray;
+
+    &::before {
+      margin-right: 12px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 500;
+
+    &::before {
+      margin-right: 30px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.accordion__description {
+  padding: 20px 20px 30px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $font-gray;
+
+
+  @media (min-width: $tablet) {
+    padding: 20px 40px 40px;
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 36px 60px 60px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 300;
+  }
+}
+
+.accordion__item--collapse + .accordion__description {
+  display: none;
+}

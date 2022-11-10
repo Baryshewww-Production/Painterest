@@ -1,0 +1,150 @@
+.consumption-item {
+  padding: 15px 15px 20px;
+  border-radius: 10px;
+
+  &--1 {
+    background-color: $bg-red-opacity;
+  }
+
+  &--2 {
+    background-color: $bg-indigo-opacity;
+  }
+
+  &--3 {
+    background-color: $bg-green-opacity;
+  }
+
+  &--4 {
+    background-color: $bg-orange-opacity;
+  }
+
+  @media (min-width: $phablet) {
+    padding: 20px 20px 30px;
+  }
+
+  @media (min-width: $tablet) {
+    border-radius: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 20px 30px 40px;
+  }
+}
+
+.consumption-item__title {
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 500;
+
+  &--red {
+    color: $basic-red;
+  }
+
+  &--blue {
+    color: $basic-indigo;
+  }
+
+  &--green {
+    color: $basic-green;
+  }
+
+  &--yellow {
+    color: $basic-orange;
+  }
+
+  @media (min-width: $phablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.consumption-item__materials-list {
+  @include list-style-reset();
+  display: grid;
+  gap: 9px;
+
+  @media (min-width: $phablet) {
+    gap: 5px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 10px;
+  }
+}
+
+.consumption-item__material-item {
+  position: relative;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  color: $font-gray-dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    border-radius: 5px;
+  }
+
+  &--red::before {
+    background-color: $basic-red;
+  }
+
+  &--blue::before {
+    background-color: $basic-indigo;
+  }
+
+  &--green::before {
+    background-color: $basic-green;
+  }
+
+  &--yellow::before {
+    background-color: $basic-orange;
+  }
+
+  @media (min-width: $phablet) {
+    font-size: 16px;
+    line-height: 26px;
+
+    &::before {
+      top: 12px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 32px;
+    font-size: 18px;
+    line-height: 22px;
+
+    &::before {
+      top: 11px;
+      width: 20px;
+    }
+  }
+}
+
+.consumption-item__additional-info {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 300;
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

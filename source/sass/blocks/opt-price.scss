@@ -1,0 +1,51 @@
+.opt-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid $brand-green;
+  background-color: $brand-green-light;
+  border-radius: 10px;
+
+  @media (min-width: $phablet) {
+    padding: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 10px;
+    padding: 29px;
+    border-radius: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 20px;
+  }
+}
+
+.opt-price__description {
+  margin: 0;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $brand-green;
+  text-align: center;
+
+  &--weight {
+    font-weight: 700;
+  }
+
+  @media (min-width: $phablet) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}

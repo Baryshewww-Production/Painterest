@@ -1,0 +1,275 @@
+.colors {
+  padding-top: 65px;
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 140px;
+  }
+}
+
+.colors__heading {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.colors__common-wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr minmax(359px, 474px);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+}
+
+.colors__lead {
+  margin: 0 0 30px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $font-gray;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.colors__thumbs-list {
+  @include list-style-reset();
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  margin-bottom: 30px;
+
+  @media (min-width: $phablet) {
+    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+    row-gap: 5px;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(5, 55px);
+    gap: 6px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-template-columns: repeat(auto-fit, minmax(66px, 1fr));
+    gap: 6px;
+    min-width: 492px;
+    max-width: 705px;
+    margin-bottom: 0;
+  }
+}
+
+.colors__thumb-item {
+  display: flex;
+  justify-content: center;
+}
+
+.colors__thumb-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--1 {
+    background-color: $color-1;
+  }
+
+  &--2 {
+    background-color: $color-2;
+  }
+
+  &--3 {
+    background-color: $color-3;
+  }
+
+  &--4 {
+    background-color: $color-4;
+  }
+
+  &--5 {
+    background-color: $color-5;
+  }
+
+  &--6 {
+    background-color: $color-6;
+  }
+
+  &--7 {
+    border: 1px solid $special-gray;
+    background-color: $color-7;
+  }
+
+  &--8 {
+    background-color: $color-8;
+  }
+
+  &--9 {
+    background-color: $color-9;
+  }
+
+  &--10 {
+    background-color: $color-10;
+  }
+
+  &--11 {
+    background-color: $color-11;
+  }
+
+  &--12 {
+    background-color: $color-12;
+  }
+
+  &--13 {
+    background-color: $color-13;
+  }
+
+  &--14 {
+    background-color: $color-14;
+  }
+
+  &--15 {
+    background-color: $color-15;
+  }
+
+  &--16 {
+    background-color: $color-16;
+  }
+
+  &--17 {
+    background-color: $color-17;
+  }
+
+  &--18 {
+    background-color: $color-18;
+  }
+
+  &--19 {
+    background-color: $color-19;
+  }
+
+  &--20 {
+    background-color: $color-20;
+  }
+
+  @media (min-width: $phablet) {
+    width: 55px;
+    height: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 66px;
+    height: 66px;
+  }
+}
+
+.colors__content-list {
+  @include list-style-reset();
+
+  @media (min-width: $desktop) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    min-width: 492px;
+    max-width: 705px;
+  }
+}
+
+.colors__toggler--1:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-1"]::after,
+.colors__toggler--2:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-2"]::after,
+.colors__toggler--3:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-3"]::after,
+.colors__toggler--4:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-4"]::after,
+.colors__toggler--5:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-5"]::after,
+.colors__toggler--6:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-6"]::after,
+.colors__toggler--8:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-8"]::after,
+.colors__toggler--9:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-9"]::after,
+.colors__toggler--10:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-10"]::after,
+.colors__toggler--11:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-11"]::after,
+.colors__toggler--12:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-12"]::after,
+.colors__toggler--13:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-13"]::after,
+.colors__toggler--14:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-14"]::after,
+.colors__toggler--15:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-15"]::after,
+.colors__toggler--16:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-16"]::after,
+.colors__toggler--17:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-17"]::after,
+.colors__toggler--18:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-18"]::after,
+.colors__toggler--19:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-19"]::after,
+.colors__toggler--20:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-20"]::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  transform: rotate(45deg);
+  background-color: $white;
+}
+
+.colors__toggler--7:checked ~ .colors__thumbs-list .colors__thumb-button[for="color-7"]::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  transform: rotate(45deg);
+  background-color: $special-gray;
+}
+
+.colors__toggler--1:checked ~ .colors__content-list .content-color--1,
+.colors__toggler--2:checked ~ .colors__content-list .content-color--2,
+.colors__toggler--3:checked ~ .colors__content-list .content-color--3,
+.colors__toggler--4:checked ~ .colors__content-list .content-color--4,
+.colors__toggler--5:checked ~ .colors__content-list .content-color--5,
+.colors__toggler--6:checked ~ .colors__content-list .content-color--6,
+.colors__toggler--7:checked ~ .colors__content-list .content-color--7,
+.colors__toggler--8:checked ~ .colors__content-list .content-color--8,
+.colors__toggler--9:checked ~ .colors__content-list .content-color--9,
+.colors__toggler--10:checked ~ .colors__content-list .content-color--10,
+.colors__toggler--11:checked ~ .colors__content-list .content-color--11,
+.colors__toggler--12:checked ~ .colors__content-list .content-color--12,
+.colors__toggler--13:checked ~ .colors__content-list .content-color--13,
+.colors__toggler--14:checked ~ .colors__content-list .content-color--14,
+.colors__toggler--15:checked ~ .colors__content-list .content-color--15,
+.colors__toggler--16:checked ~ .colors__content-list .content-color--16,
+.colors__toggler--17:checked ~ .colors__content-list .content-color--17,
+.colors__toggler--18:checked ~ .colors__content-list .content-color--18,
+.colors__toggler--19:checked ~ .colors__content-list .content-color--19,
+.colors__toggler--20:checked ~ .colors__content-list .content-color--20 {
+  display: grid;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.colors__color-shades {
+  @media (min-width: $tablet) {
+    grid-column: span 2;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2/-1;
+    grid-row: span 2;
+  }
+}

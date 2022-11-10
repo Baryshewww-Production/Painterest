@@ -1,0 +1,16 @@
+.page-header {
+  padding-bottom: 30px;
+  background-color: $bg-burgundy;
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.page-header__intro {
+  margin-bottom: 43px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}

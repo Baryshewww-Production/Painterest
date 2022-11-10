@@ -1,0 +1,59 @@
+.heading {
+  margin: 0;
+  position: relative;
+  z-index: 5;
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--h1 {
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: 300;
+    margin-bottom: 50px;
+
+    @media (min-width: $phablet) {
+      max-width: 420px;
+      br {
+        display: none;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      width: 320px;
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 43px;
+
+      br {
+        display: inline;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 37px;
+      line-height: 43px;
+      width: 441px;
+      max-width: unset;
+    }
+  }
+
+  &--h2 {
+    font-size: 23px;
+    line-height: 27px;
+    font-weight: 500;
+
+    @media (min-width: $tablet) {
+      font-size: 26px;
+      line-height: 31px;
+      font-weight: 400;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 35px;
+      line-height: 42px;
+      font-weight: 400;
+    }
+  }
+}

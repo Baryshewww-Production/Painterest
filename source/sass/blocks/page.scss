@@ -1,0 +1,20 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}

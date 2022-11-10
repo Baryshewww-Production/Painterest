@@ -1,0 +1,91 @@
+.button {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  color: $white;
+  background-color: $brand-red;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $brand-dark-blue;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    height: 55px;
+  }
+
+  &--white-text {
+    color: $white;
+  }
+
+  &--intro {
+    position: relative;
+    z-index: 100;
+    background-color: $white;
+    color: $bg-burgundy;
+    font-weight: 500;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $brand-red;
+    }
+
+    @media (min-width: $tablet) {
+      height: 50px;
+      color: $white;
+      background-color: $brand-red;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $button-intro-hover;
+        box-shadow: 0 0 49px #FF5D67;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      height: 64px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+  }
+
+  &--bordered {
+    color: $brand-red;
+    background-color: $white;
+    border: 1px solid $brand-red;
+    transition: all 0.25s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $brand-red;
+    }
+  }
+}

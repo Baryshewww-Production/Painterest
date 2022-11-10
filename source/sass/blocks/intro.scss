@@ -1,0 +1,151 @@
+.intro {
+  padding-top: 103px;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    padding-top: 135px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 205px;
+  }
+}
+
+.intro__top-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 175px minmax(auto, 135px);
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 222px minmax(auto, 123px);
+    margin-bottom: 0;
+  }
+}
+
+.intro__heading-inner {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    min-width: 320px;
+    max-width: 390px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 441px;
+    max-width: 550px;
+  }
+}
+
+.intro__heading {
+  text-align: center;
+
+  @media (min-width: $phablet) {
+    justify-self: center;
+  }
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    grid-column: 2/-1;
+  }
+}
+
+.intro__picture {
+  position: relative;
+  z-index: 4;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -5;
+    top:-110%;
+    left: -80%;
+    width: 240%;
+    height: 230%;
+    background-image: url("../../img/svg/main-foto-bg-mobile.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $phablet) {
+    max-width: 348px;
+    justify-self: center;
+  }
+
+  @media (min-width: $tablet) {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    max-width: unset;
+    justify-self: unset;
+  }
+}
+
+.intro__image {
+  width: 100%;
+  height: auto;
+}
+
+.intro__button-inner {
+  margin-top: 35px;
+
+  @media (min-width: $phablet) {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+    max-width: 390px;
+    justify-content: flex-end;
+    align-self: start;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 550px;
+  }
+}
+
+.intro__button {
+  @media (min-width: $phablet) {
+    min-width: 348px;
+    max-width: 351px;
+  }
+
+  @media (min-width: $tablet) {
+    min-width: unset;
+    width: 320px;
+    grid-column: 2/-1;
+  }
+
+  @media (min-width: $desktop) {
+    width: 441px;
+    max-width: unset;
+  }
+}
+
+.intro__features {
+  position: relative;
+  z-index: 20;
+
+  @media (min-width: $desktop) {
+    padding-top: 46px;
+  }
+}
+
+.intro__about {
+  margin-top: 43px;
+
+  @media (min-width: $desktop) {
+    margin-top: 76px;
+  }
+}

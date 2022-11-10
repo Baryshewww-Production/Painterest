@@ -1,0 +1,42 @@
+.price {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+
+  &--full {
+    color: $font-gray;
+  }
+
+  &--opt {
+    color: $white;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.price__money {
+  &--full {
+    margin-right: 4px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &--opt {
+    font-weight: 700;
+  }
+
+  @media (min-width: $tablet) {
+    &--full {
+      margin-right: 5px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+  }
+}

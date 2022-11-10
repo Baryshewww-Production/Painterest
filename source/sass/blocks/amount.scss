@@ -1,0 +1,104 @@
+.amount {
+  padding-top: 65px;
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+  }
+  @media (min-width: $desktop) {
+    padding-top: 140px;
+  }
+}
+
+.amount__heading {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.amount__consumption {
+  display: grid;
+  gap: 30px;
+}
+
+.amount__caption {
+  display: flex;
+  margin: 0;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+
+  &--light {
+    color: $font-gray;
+    background-color: $special-gray-light;
+  }
+
+  &--dark {
+    justify-self: left;
+    margin-top: 30px;
+    color: $white;
+    background-color: $brand-dark-blue;
+  }
+
+  @media (min-width: $phablet) {
+    justify-self: left;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 19px;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 25px;
+    line-height: 25px;
+
+    &--dark {
+      margin-top: 50px;
+    }
+  }
+}
+
+.amount__consumption-list {
+  @include list-style-reset();
+  display: grid;
+  gap: 10px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.amount__volume {
+  display: grid;
+  gap: 30px;
+}
+
+.amount__volume-card-list {
+  display: grid;
+  gap: 15px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, minmax(209px, 1fr));
+    gap: 15px;
+  }
+}

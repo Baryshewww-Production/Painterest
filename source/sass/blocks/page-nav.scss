@@ -1,0 +1,388 @@
+.page-nav {
+  position: fixed;
+  z-index: 1000;
+  top: -1px;
+  left: 0;
+  width: 100vw;
+  min-height: 75px;
+}
+
+.page-nav__common-wrapper {
+  margin-right: -1px;
+  margin-left: -1px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.page-nav__common-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  z-index: 30;
+  background-color: rgba($white, 30%);
+
+  &--white {
+    background-color: $white;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.page-nav__toggler {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 35px;
+  border: none;
+  padding: 0;
+  justify-self: right;
+  background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($special-gray-light, 50%);
+  }
+
+  &--closed {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 0;
+      width: 24px;
+      height: 2px;
+      transform: rotate(0);
+      border-radius: 5px;
+      background-color: $white;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 12px;
+      width: 24px;
+      height: 2px;
+      transform: rotate(0);
+      border-radius: 5px;
+      background-color: $white;
+      transition: transform 0.3s;
+    }
+  }
+
+  &--opened {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 0;
+      transform: rotate(45deg);
+      width: 24px;
+      height: 2px;
+      border-radius: 5px;
+      background-color: $font-gray;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 17px;
+      transform: rotate(-45deg);
+      width: 24px;
+      height: 2px;
+      border-radius: 5px;
+      background-color: $font-gray;
+      transition: transform 0.3s;
+    }
+  }
+}
+
+.page-nav__content-wrapper {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: -20px;
+  background-color: $white;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+
+  @media (min-width: $tablet) {
+    padding-top: 55px;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    z-index: 110;
+    margin-top: 0;
+  }
+}
+
+.page-nav__buttons-wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+    position: absolute;
+    top: -60px;
+    right: 100px;
+  }
+}
+
+.page-nav__buttons-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0 0 35px;
+
+  @media (min-width: $phablet) {
+    max-width: 348px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet) {
+    gap: 25px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(5, auto);
+    gap: 9px;
+    max-width: 241px;
+    margin: 0;
+  }
+}
+
+.page-nav__links-inner {
+  display: none;
+
+  //@media (min-width: $desktop-max) {
+  //  display: block;
+  //}
+}
+
+.page-nav__menu-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 25px 0 25px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $phablet) {
+    width: 348px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet) {
+    width: 190px;
+    margin: 0 auto 0 0;
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
+    width: 100%;
+    margin-top: -20px;
+    padding: 35px 30px 101px;
+    background-color: $white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  }
+}
+
+.page-nav__menu-item {
+  @media (min-width: $phablet) {
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
+}
+
+.page-nav__menu-link {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $font-gray;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $brand-red;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 20px;
+    padding-left: 17px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    &--1::before {
+      background-color: $basic-red;
+    }
+
+    &--2::before {
+      background-color: $basic-orange;
+    }
+
+    &--3::before {
+      background-color: $basic-blue;
+    }
+
+    &--4::before {
+      background-color: $basic-indigo;
+    }
+
+    &--5::before {
+      background-color: $basic-green;
+    }
+
+    &--6::before {
+      background-color: $basic-violet;
+    }
+
+    &--7::before {
+      background-color: $basic-yellow;
+    }
+
+    &--8::before {
+      background-color: $basic-azure;
+    }
+
+    &--9::before {
+      background-color: $basic-herbal;
+    }
+  }
+}
+
+//В закрытом состоянии меню, кнопки и ссылки скрыты и невидимы
+.page-nav--closed .page-nav__menu-list,
+.page-nav--closed .page-nav__buttons-wrapper {
+  display: none;
+}
+
+//На ширине десктопа кнопки превращаются в иконки и у них исчезает текст
+.page-nav--closed .page-nav__buttons-wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+  }
+}
+
+//В открытом состоянии меню видны ссылки
+.page-nav--opened .page-nav__menu-list {
+  display: grid;
+}
+
+//В закрытом меню (с мобайла до десктопа), блок с ссылками и кнопками почти невидим
+//уменьшен до нуля и приподнят наверх. Это сделано для красивой анимации
+.page-nav--closed .page-nav__content-wrapper {
+  @media (min-width: $mobile) {
+    transform: translateY(-80%) scaleY(0);
+    opacity: 0.8;
+  }
+
+  //На ширине десктопа все стили сбрасываются, потому что их предназначение закончилось
+  @media (min-width: $desktop) {
+    opacity: 1;
+    transform: unset;
+    padding: 0;
+    background-color: transparent;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: none;
+  }
+}
+
+//В открытом меню (с мобайла до десктопа), блок с ссылками и кнопками уже видимы,
+//увеличены до полного размера и опущены вниз. Это сделано для красивой анимации
+.page-nav--opened .page-nav__content-wrapper {
+  @media (min-width: $mobile) {
+    transform-origin: top;
+    transform: translateY(0%) scaleY(1);
+    opacity: 1;
+    transition: 0.4s;
+  }
+
+  //На ширине десктопа все стили сбрасываются, потому что их предназначение закончилось
+  @media (min-width: $desktop) {
+    opacity: 1;
+    transform: unset;
+    padding: 0;
+    background-color: transparent;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: none;
+  }
+}
+
+//Когда меню открыто или проскролено, крестик становится серым
+.page-nav__common-inner--white .page-nav__toggler::before,
+.page-nav__common-inner--white .page-nav__toggler::after {
+  background-color: $font-gray;
+}
+
+//Дальше идут стили для стилизации меню на десктопе
+
+.page-nav--opened .page-nav__buttons-wrapper {
+  @media (min-width: $desktop) {
+    top: auto;
+    bottom: 30px;
+  }
+}
+
+.page-nav--closed .page-nav__menu-list {
+  @media (min-width: $desktop) {
+    transform: translateY(-80%) scaleY(0);
+    opacity: 0.8;
+    transition: 0.4s;
+  }
+}
+
+.page-nav--opened .page-nav__menu-list {
+  @media (min-width: $desktop) {
+    transform-origin: top;
+    transform: translateY(0%) scaleY(1);
+    opacity: 1;
+
+  }
+}
