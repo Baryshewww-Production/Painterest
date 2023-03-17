@@ -26,6 +26,10 @@
   z-index: 30;
   background-color: rgba($white, 30%);
 
+  &--blog {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  }
+
   &--white {
     background-color: $white;
   }
@@ -221,6 +225,36 @@
   @media (min-width: $tablet) {
     text-align: left;
   }
+
+  &--blog {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 92px;
+    padding: 6px 15px;
+    background-color: $brand-red;
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-dark-blue;
+    }
+
+    @media (min-width: $phablet) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: $tablet) {
+      margin: unset;
+      width: 102px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: unset;
+      width: 92px;
+    }
+  }
 }
 
 .page-nav__menu-link {
@@ -293,96 +327,146 @@
       background-color: $basic-herbal;
     }
   }
+
+  &--blog {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      width: 15px;
+      height: 13px;
+      background-image: url("../../img/svg/strelka-blog.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    @media (min-width: $tablet) {
+      font-size: 22px;
+      line-height: 26px;
+
+      &::after {
+        top: 7px;
+        width: 16px;
+        height: 14px;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 20px;
+      padding-left: 0;
+
+      &::after {
+        top: 3px;
+        width: 16px;
+        height: 14px;
+      }
+    }
+  }
 }
 
-//В закрытом состоянии меню, кнопки и ссылки скрыты и невидимы
-.page-nav--closed .page-nav__menu-list,
-.page-nav--closed .page-nav__buttons-wrapper {
-  display: none;
-}
+  //В закрытом состоянии меню, кнопки и ссылки скрыты и невидимы
+  .page-nav--closed .page-nav__menu-list,
+  .page-nav--closed .page-nav__buttons-wrapper {
+    display: none;
+  }
 
-//На ширине десктопа кнопки превращаются в иконки и у них исчезает текст
-.page-nav--closed .page-nav__buttons-wrapper {
-  @media (min-width: $desktop) {
+  //На ширине десктопа кнопки превращаются в иконки и у них исчезает текст
+  .page-nav--closed .page-nav__buttons-wrapper {
+    @media (min-width: $desktop) {
+      display: grid;
+    }
+  }
+
+  //В открытом состоянии меню видны ссылки
+  .page-nav--opened .page-nav__menu-list {
     display: grid;
   }
+
+.page-nav--opened .page-nav__common-inner--blog {
+  box-shadow: none;
 }
 
-//В открытом состоянии меню видны ссылки
-.page-nav--opened .page-nav__menu-list {
-  display: grid;
-}
+  //В закрытом меню (с мобайла до десктопа), блок с ссылками и кнопками почти невидим
+  //уменьшен до нуля и приподнят наверх. Это сделано для красивой анимации
+  .page-nav--closed .page-nav__content-wrapper {
+    @media (min-width: $mobile) {
+      transform: translateY(-80%) scaleY(0);
+      opacity: 0.8;
+    }
 
-//В закрытом меню (с мобайла до десктопа), блок с ссылками и кнопками почти невидим
-//уменьшен до нуля и приподнят наверх. Это сделано для красивой анимации
-.page-nav--closed .page-nav__content-wrapper {
-  @media (min-width: $mobile) {
-    transform: translateY(-80%) scaleY(0);
-    opacity: 0.8;
+    //На ширине десктопа все стили сбрасываются, потому что их предназначение закончилось
+    @media (min-width: $desktop) {
+      opacity: 1;
+      transform: unset;
+      padding: 0;
+      background-color: transparent;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      box-shadow: none;
+    }
   }
 
-  //На ширине десктопа все стили сбрасываются, потому что их предназначение закончилось
-  @media (min-width: $desktop) {
-    opacity: 1;
-    transform: unset;
-    padding: 0;
-    background-color: transparent;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    box-shadow: none;
+  //В открытом меню (с мобайла до десктопа), блок с ссылками и кнопками уже видимы,
+  //увеличены до полного размера и опущены вниз. Это сделано для красивой анимации
+  .page-nav--opened .page-nav__content-wrapper {
+    @media (min-width: $mobile) {
+      transform-origin: top;
+      transform: translateY(0%) scaleY(1);
+      opacity: 1;
+      transition: 0.4s;
+    }
+
+    //На ширине десктопа все стили сбрасываются, потому что их предназначение закончилось
+    @media (min-width: $desktop) {
+      opacity: 1;
+      transform: unset;
+      padding: 0;
+      background-color: transparent;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      box-shadow: none;
+    }
   }
-}
 
-//В открытом меню (с мобайла до десктопа), блок с ссылками и кнопками уже видимы,
-//увеличены до полного размера и опущены вниз. Это сделано для красивой анимации
-.page-nav--opened .page-nav__content-wrapper {
-  @media (min-width: $mobile) {
-    transform-origin: top;
-    transform: translateY(0%) scaleY(1);
-    opacity: 1;
-    transition: 0.4s;
+  //Когда меню открыто или проскролено, крестик становится серым
+  .page-nav__common-inner--white .page-nav__toggler::before,
+  .page-nav__common-inner--white .page-nav__toggler::after {
+    background-color: $font-gray;
   }
 
-  //На ширине десктопа все стили сбрасываются, потому что их предназначение закончилось
-  @media (min-width: $desktop) {
-    opacity: 1;
-    transform: unset;
-    padding: 0;
-    background-color: transparent;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    box-shadow: none;
+  //Дальше идут стили для стилизации меню на десктопе
+
+  .page-nav--opened .page-nav__buttons-wrapper {
+    @media (min-width: $desktop) {
+      top: auto;
+      bottom: 30px;
+    }
   }
-}
 
-//Когда меню открыто или проскролено, крестик становится серым
-.page-nav__common-inner--white .page-nav__toggler::before,
-.page-nav__common-inner--white .page-nav__toggler::after {
-  background-color: $font-gray;
-}
-
-//Дальше идут стили для стилизации меню на десктопе
-
-.page-nav--opened .page-nav__buttons-wrapper {
-  @media (min-width: $desktop) {
-    top: auto;
-    bottom: 30px;
+  .page-nav--closed .page-nav__menu-list {
+    @media (min-width: $desktop) {
+      transform: translateY(-80%) scaleY(0);
+      opacity: 0.8;
+      transition: 0.4s;
+    }
   }
-}
 
-.page-nav--closed .page-nav__menu-list {
-  @media (min-width: $desktop) {
-    transform: translateY(-80%) scaleY(0);
-    opacity: 0.8;
-    transition: 0.4s;
+  .page-nav--opened .page-nav__menu-list {
+    @media (min-width: $desktop) {
+      transform-origin: top;
+      transform: translateY(0%) scaleY(1);
+      opacity: 1;
+    }
   }
-}
-
-.page-nav--opened .page-nav__menu-list {
-  @media (min-width: $desktop) {
-    transform-origin: top;
-    transform: translateY(0%) scaleY(1);
-    opacity: 1;
-
-  }
-}
