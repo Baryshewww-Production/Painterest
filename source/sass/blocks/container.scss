@@ -31,4 +31,16 @@
       margin: 0 auto;
     }
   }
+
+  &--blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  &--blog-article {
+    @media (min-width: $desktop) {
+      padding: 0 250px;
+    }
+  }
 }

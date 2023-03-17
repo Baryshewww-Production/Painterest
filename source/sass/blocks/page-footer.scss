@@ -1,5 +1,9 @@
 .page-footer {
   background-color: rgba($bg-burgundy, 4%);
+
+  &--blog {
+    height: 120px;
+  }
 }
 
 .page-footer__common-wrapper {

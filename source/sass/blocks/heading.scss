@@ -56,4 +56,40 @@
       font-weight: 400;
     }
   }
+
+  &--blog {
+    color: $font-gray;
+    font-weight: 400;
+    margin-bottom: 0;
+
+    @media (min-width: $phablet) {
+      max-width: unset;
+    }
+
+    @media (min-width: $tablet) {
+      width: unset;
+    }
+  }
+
+  &--blog-h1 {
+    color: $font-gray-dark;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 27px;
+
+    @media (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 37px;
+      line-height: 43px;
+    }
+  }
+}
+
+.heading__accent {
+  font-weight: 700;
+  color: $font-gray-dark;
 }

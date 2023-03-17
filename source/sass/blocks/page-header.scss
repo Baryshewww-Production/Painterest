@@ -5,6 +5,11 @@
   @media (min-width: $desktop) {
     padding-bottom: 0;
   }
+
+  &--blog {
+    background-color: $white;
+    padding-bottom: 0;
+  }
 }
 
 .page-header__intro {
