@@ -1,0 +1,15 @@
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin: 50px 0;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 28px;
+  }
+}
