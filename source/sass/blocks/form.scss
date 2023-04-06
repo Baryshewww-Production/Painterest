@@ -1,0 +1,383 @@
+.form {
+  @media (min-width: $phablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    grid-template-areas: "legend-1 legend-1"
+                         "select select"
+                         "legend-2 legend-2"
+                         "input-area input-area"
+                         "input-length input-height"
+                         "result result"
+                         "contacts contacts";
+  }
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    column-gap: 20px;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "legend-1 legend-1 legend-1"
+                         "select select ."
+                         "legend-2 legend-2 legend-2"
+                         "input-area input-length input-height"
+                         "result result result"
+                         "contacts contacts contacts";
+  }
+
+  @media (min-width: $desktop) {
+    width: 821px;
+  }
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form__fieldset-select {
+  @media (min-width: $phablet) {
+    grid-area: select;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__fieldset-area {
+  @media (min-width: $phablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-area: input-area;
+  }
+}
+
+.form__fieldset-length {
+  @media (min-width: $phablet) {
+    grid-area: input-length;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form__fieldset-height {
+  @media (min-width: $phablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-area: input-height;
+  }
+}
+
+.form__fieldset-inner {
+  @media (min-width: $tablet) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.form__result-inner {
+  @media (min-width: $phablet) {
+    grid-area: result;
+  }
+}
+
+.form__contacts-inner {
+  @media (min-width: $phablet) {
+    grid-area: contacts;
+  }
+}
+
+.form__legend {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  margin-bottom: 13px;
+  color: $brand-dark-blue;
+
+  @media (min-width: $phablet) {
+    &--1 {
+      grid-area: legend-1;
+    }
+
+    &--2 {
+      grid-area: legend-2;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
+
+    &--3 {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__select {
+  padding: 15px;
+  width: 100%;
+  height: 47px;
+  border-radius: 5px;
+  border: 1px solid #C5BDBD;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #959595;
+  appearance: none;
+  background-image: url("../../img/svg/arrow-select-down.svg");
+  background-size: 14px 9px;
+  background-repeat: no-repeat;
+  background-position: right 20px top 19px;
+  outline: none;
+
+  &:active,
+  &:focus {
+    border-color: $brand-dark-blue;
+  }
+
+  @media (min-width: $phablet) {
+    grid-area: select;
+  }
+}
+
+.form__label-input {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #959595;
+
+  @media (min-width: $tablet) {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+}
+
+.form__input {
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  height: 47px;
+  border-radius: 5px;
+  border: 1px solid #C5BDBD;
+  margin-bottom: 15px;
+  color: black;
+  outline: none;
+
+  &:active,
+  &:focus {
+    border-color: $brand-dark-blue;
+  }
+}
+
+.form__input[id="square-input"] {
+  background-image: url("../../img/svg/м².svg");
+  background-size: 18px 15px;
+  background-repeat: no-repeat;
+  background-position: right 16px top 14px;
+
+  @media (min-width: $phablet) {
+    width: 156px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.form__input[id="height-input"],
+.form__input[id="length-input"] {
+  background-image: url("../../img/svg/м.svg");
+  background-size: 12px 10px;
+  background-repeat: no-repeat;
+  background-position: right 17px top 18px;
+}
+
+.form__fieldset-select {
+  @media (min-width: $phablet) {
+    grid-area: select;
+  }
+}
+
+.form__caption-result {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $brand-dark-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.form__result-material {
+  color: $brand-red;
+}
+
+.form__result-area {
+  color: $brand-red;
+}
+
+.form__sum-result {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #959595;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.form__weight-result {
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 700;
+  color: $brand-dark-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+.form__weight-number {
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 700;
+  color: $brand-dark-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+.form__price-result {
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 700;
+  color: $brand-dark-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+.form__price-number {
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 700;
+  color: $brand-dark-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+.form__contacts-caption {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #959595;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 35px;
+  }
+}
+
+.form__contacts-buttons {
+  display: flex;
+}
+
+.form__button {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  &--whatsapp {
+    margin-right: 10px;
+    background-color: $whatsapp;
+    background-image: url("../../img/svg/icon-whatsapp.svg");
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  &--telegram {
+    margin-right: 10px;
+    background-color: $telegram;
+    background-image: url("../../img/svg/icon-telegram.svg");
+    background-size: 28px 23px;
+    background-repeat: no-repeat;
+    background-position: left 9px top 13px;
+  }
+
+  &--phone {
+    background-color: #00A660;
+    background-image: url("../../img/svg/icon-mobile-phone.svg");
+    background-size: 24px 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $tablet) {
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    border-radius: 10px;
+
+    &--whatsapp {
+      margin-right: 15px;
+      background-position: left 20px top 11px;
+
+    }
+
+    &--telegram {
+      margin-right: 15px;
+      background-position: left 20px top 13px;
+    }
+
+    &--phone {
+      width: 167px;
+      background-position: left 20px top 13px;
+    }
+  }
+}
+
+.form__button-text {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+    margin-right: 25px;
+    color: $white;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+}

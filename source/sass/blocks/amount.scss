@@ -83,6 +83,17 @@
   }
 }
 
+.amount__calculator {
+  padding: 15px 15px 25px;
+  background-color: #F5F4F4;
+  border-radius: 10px;
+
+  @media (min-width: $phablet) {
+    border-radius: 15px;
+    padding: 25px 25px 35px;
+  }
+}
+
 .amount__volume {
   display: grid;
   gap: 30px;
