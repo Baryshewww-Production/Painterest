@@ -84,7 +84,7 @@ function getCalculatorResult (masterObj) {
   areaSurfaceOutput.textContent = totalAreaSurfaceInput.value;
   sumWeight = Math.ceil(totalAreaSurfaceInput.value * multiplier);
   weightPaintOutput.textContent = sumWeight;
-  pricePaintOutput.textContent = +sumWeight * 430;
+  pricePaintOutput.textContent = +sumWeight * 550;
 }
 
 function validateInputs() {
