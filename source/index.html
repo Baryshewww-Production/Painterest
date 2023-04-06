@@ -301,6 +301,122 @@
 </header>
 
 <main>
+  <section class="amount" id="amount">
+    <div class="container">
+      <div class="amount__heading heading-section heading-section--amount">
+        <h2 class="heading-section__caption">
+          <span class="heading-section__text-accent">Рассчитайте <span class="heading-section__text-accent--hidden">нужное</span> количество</span>
+          <span class="heading-section__text">резиновой краски Painterest™</span>
+        </h2>
+        <div class="heading-section__bg"></div>
+      </div>
+      <div class="amount__calculator">
+        <form class="amount__form form">
+          <span class="form__legend form__legend--1">Выберите окрашиваемый материал и тип поверхности</span>
+
+          <div class="form__fieldset-select">
+            <label class="form__label-input" for="material-select">Материал:</label>
+            <select class="form__select" name="materials" id="material-select">
+
+              <optgroup label="250 г/м²">
+                <option data-name="оцинкованная сталь" value="250">Оцинкованная сталь</option>
+                <option value="250">Черный металл (обязательно огрунтовать антикоррозионным грунтом - например
+                                    ГФ-021)</option>
+                <option value="250">Ранее окрашенные поверхности</option>
+                <option value="250">Шлифованная древесина</option>
+              </optgroup>
+
+              <optgroup label="300 г/м²">
+                <option value="300">Оцинкованный профнастил с мелкой волной</option>
+              </optgroup>
+
+              <optgroup label="350 г/м²">
+                <option value="350">Шпатлёванная поверхность</option>
+                <option value="350">Обои</option>
+                <option value="350">Гипсокартон</option>
+                <option value="350">ДСП, ДВП, OSB/3</option>
+                <option value="350">Фанера</option>
+                <option value="350">Дерево</option>
+              </optgroup>
+
+              <optgroup label="400 г/м²">
+                <option value="400">Бетон, штукатурка</option>
+                <option value="400">Кирпичная кладка</option>
+                <option value="400">Плохо строганная древесина</option>
+                <option value="400">Пенобетон</option>
+                <option value="400">Евровагонка</option>
+              </optgroup>
+
+              <optgroup label="450 г/м²">
+                <option value="450">Волнистый шифер</option>
+                <option value="450">Цементная «шуба»</option>
+                <option value="450">Цилиндровка</option>
+                <option value="450">Бревно</option>
+                <option value="450">Неровные поверхности</option>
+              </optgroup>
+
+            </select>
+          </div>
+
+          <span class="form__legend form__legend--2">Укажите окрашиваемую площадь</span>
+
+          <div class="form__fieldset-area">
+            <label class="form__label-input" for="square-input">Площадь:</label>
+            <input class="form__input" type="text" name="square" id="square-input" autocomplete="off">
+          </div>
+
+          <div class="form__fieldset-length">
+            <span class="form__legend form__legend--3">или</span>
+            <div class="form__fieldset-inner">
+              <label class="form__label-input" for="length-input">Длина:</label>
+              <input class="form__input" type="text" name="length" id="length-input" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="form__fieldset-height">
+            <label class="form__label-input" for="height-input">Высота:</label>
+            <input class="form__input" type="text" name="height" id="height-input" autocomplete="off">
+          </div>
+
+
+          <div class="form__result-inner">
+            <p class="form__caption-result">
+              Для покраски материала&ensp;
+              <output class="form__result-material"></output>
+              &ensp;площадью&nbsp;
+              <output class="form__result-area"></output>
+              &nbsp;м² вам понадобится:
+            </p>
+
+            <p class="form__sum-result">
+            <span class="form__weight-result">
+              ~&nbsp;<output class="form__weight-number"></output>&nbsp;кг
+            </span>
+              резиновой краски Painterest на общую сумму:
+              <span class="form__price-result"><output class="form__price-number"></output>&nbsp;руб.</span>
+            </p>
+          </div>
+
+          <div class="form__contacts-inner">
+            <p class="form__contacts-caption">Напишите или позвоните нашему менеджеру, чтобы сделать заказ:</p>
+            <div class="form__contacts-buttons">
+              <a href="https://wa.me/79777393657" class="form__button form__button--whatsapp">
+                <span class="form__button-text">Написать</span>
+              </a>
+              <a href="https://t.me/painterestdecor" class="form__button form__button--telegram">
+                <span class="form__button-text">Написать</span>
+              </a>
+              <a href="tel:+74997148870" class="form__button form__button--phone">
+                <span class="form__button-text">Позвонить</span>
+              </a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="important-features" id="features">
     <div class="container">
       <div class="important-features__heading heading-section heading-section--features">
@@ -1414,53 +1530,111 @@
         <div class="heading-section__bg"></div>
       </div>
 
-      <div class="amount__consumption">
-        <p class="amount__caption amount__caption--light">Примерный расход резиновой краски (в&nbsp;2&nbsp;слоя):</p>
-        <ul class="amount__consumption-list">
-          <li class="consumption-item consumption-item--1">
-            <h3 class="consumption-item__title consumption-item__title--red">от&nbsp;250&nbsp;г/м<sup>2</sup></h3>
-            <ul class="consumption-item__materials-list">
-              <li class="consumption-item__material-item consumption-item__material-item--red">оцинкованная сталь</li>
-              <li class="consumption-item__material-item consumption-item__material-item--red">черный металл
-                <span class="consumption-item__additional-info">(обязательно огрунтовать антикоррозионным грунтом&nbsp;&ndash;&nbsp;например ГФ-021)</span>
-              </li>
-              <li class="consumption-item__material-item consumption-item__material-item--red">ранее окрашенные поверхности</li>
-              <li class="consumption-item__material-item consumption-item__material-item--red">шлифованная древесина</li>
-            </ul>
-          </li>
-          <li class="consumption-item consumption-item--2">
-            <h3 class="consumption-item__title consumption-item__title--blue">300-350&nbsp;г/м<sup>2</sup></h3>
-            <ul class="consumption-item__materials-list">
-              <li class="consumption-item__material-item consumption-item__material-item--blue">оцинкованный профнастил с&nbsp;мелкой волной</li>
-              <li class="consumption-item__material-item consumption-item__material-item--blue">шпатлёванная поверхность</li>
-              <li class="consumption-item__material-item consumption-item__material-item--blue">обои</li>
-              <li class="consumption-item__material-item consumption-item__material-item--blue">гипсокартон</li>
-              <li class="consumption-item__material-item consumption-item__material-item--blue">ДСП, ДВП, OSB/3</li>
-              <li class="consumption-item__material-item consumption-item__material-item--blue">фанера</li>
-              <li class="consumption-item__material-item consumption-item__material-item--blue">дерево</li>
-            </ul>
-          </li>
-          <li class="consumption-item consumption-item--3">
-            <h3 class="consumption-item__title consumption-item__title--green">от&nbsp;400&nbsp;г/м<sup>2</sup></h3>
-            <ul class="consumption-item__materials-list">
-              <li class="consumption-item__material-item consumption-item__material-item--green">бетон, штукатурка</li>
-              <li class="consumption-item__material-item consumption-item__material-item--green">кирпичная кладка</li>
-              <li class="consumption-item__material-item consumption-item__material-item--green">плохо строганная древесина</li>
-              <li class="consumption-item__material-item consumption-item__material-item--green">пенобетон</li>
-              <li class="consumption-item__material-item consumption-item__material-item--green">евровагонка</li>
-            </ul>
-          </li>
-          <li class="consumption-item consumption-item--4">
-            <h3 class="consumption-item__title consumption-item__title--yellow">от&nbsp;450&nbsp;г/м<sup>2</sup></h3>
-            <ul class="consumption-item__materials-list">
-              <li class="consumption-item__material-item consumption-item__material-item--yellow">волнистый шифер</li>
-              <li class="consumption-item__material-item consumption-item__material-item--yellow">цилиндровка</li>
-              <li class="consumption-item__material-item consumption-item__material-item--yellow">бревно</li>
-              <li class="consumption-item__material-item consumption-item__material-item--yellow">неровные поверхности</li>
-            </ul>
-          </li>
-        </ul>
+      <div class="amount__calculator">
+        <form class="amount__form form">
+          <span class="form__legend form__legend--1">Выберите окрашиваемый материал и тип поверхности</span>
+
+          <div class="form__fieldset-select">
+            <label class="form__label-input" for="material-select">Материал:</label>
+            <select class="form__select" name="materials" id="material-select">
+
+              <optgroup label="250 г/м²">
+                <option data-name="оцинкованная сталь" value="250">Оцинкованная сталь</option>
+                <option value="250">Черный металл (обязательно огрунтовать антикоррозионным грунтом - например
+                                    ГФ-021)</option>
+                <option value="250">Ранее окрашенные поверхности</option>
+                <option value="250">Шлифованная древесина</option>
+              </optgroup>
+
+              <optgroup label="300 г/м²">
+                <option value="300">Оцинкованный профнастил с мелкой волной</option>
+              </optgroup>
+
+              <optgroup label="350 г/м²">
+                <option value="350">Шпатлёванная поверхность</option>
+                <option value="350">Обои</option>
+                <option value="350">Гипсокартон</option>
+                <option value="350">ДСП, ДВП, OSB/3</option>
+                <option value="350">Фанера</option>
+                <option value="350">Дерево</option>
+              </optgroup>
+
+              <optgroup label="400 г/м²">
+                <option value="400">Бетон, штукатурка</option>
+                <option value="400">Кирпичная кладка</option>
+                <option value="400">Плохо строганная древесина</option>
+                <option value="400">Пенобетон</option>
+                <option value="400">Евровагонка</option>
+              </optgroup>
+
+              <optgroup label="450 г/м²">
+                <option value="450">Волнистый шифер</option>
+                <option value="450">Цементная «шуба»</option>
+                <option value="450">Цилиндровка</option>
+                <option value="450">Бревно</option>
+                <option value="450">Неровные поверхности</option>
+              </optgroup>
+
+            </select>
+          </div>
+
+          <span class="form__legend form__legend--2">Укажите окрашиваемую площадь</span>
+
+          <div class="form__fieldset-area">
+            <label class="form__label-input" for="square-input">Площадь:</label>
+            <input class="form__input" type="text" name="square" id="square-input" autocomplete="off">
+          </div>
+
+          <div class="form__fieldset-length">
+            <span class="form__legend form__legend--3">или</span>
+            <div class="form__fieldset-inner">
+              <label class="form__label-input" for="length-input">Длина:</label>
+              <input class="form__input" type="text" name="length" id="length-input" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="form__fieldset-height">
+            <label class="form__label-input" for="height-input">Высота:</label>
+            <input class="form__input" type="text" name="height" id="height-input" autocomplete="off">
+          </div>
+
+
+          <div class="form__result-inner">
+            <p class="form__caption-result">
+              Для покраски материала&ensp;
+              <output class="form__result-material"></output>
+              &ensp;площадью&nbsp;
+              <output class="form__result-area"></output>
+              &nbsp;м² вам понадобится:
+            </p>
+
+            <p class="form__sum-result">
+            <span class="form__weight-result">
+              ~&nbsp;<output class="form__weight-number"></output>&nbsp;кг
+            </span>
+              резиновой краски Painterest на общую сумму:
+              <span class="form__price-result"><output class="form__price-number"></output>&nbsp;руб.</span>
+            </p>
+          </div>
+
+          <div class="form__contacts-inner">
+            <p class="form__contacts-caption">Напишите или позвоните нашему менеджеру, чтобы сделать заказ:</p>
+            <div class="form__contacts-buttons">
+              <a href="https://wa.me/79777393657" class="form__button form__button--whatsapp">
+                <span class="form__button-text">Написать</span>
+              </a>
+              <a href="https://t.me/painterestdecor" class="form__button form__button--telegram">
+                <span class="form__button-text">Написать</span>
+              </a>
+              <a href="tel:+74997148870" class="form__button form__button--phone">
+                <span class="form__button-text">Позвонить</span>
+              </a>
+            </div>
+          </div>
+
+        </form>
       </div>
+
       <div class="amount__volume">
         <p class="amount__caption amount__caption--dark">Объем:</p>
         <div class="amount__volume-card-list">
@@ -1856,5 +2030,6 @@
 </footer>
 <script src="js/navigation.js"></script>
 <script src="js/accordion.js"></script>
+<script src="js/calc.js"></script>
 </body>
 </html>
